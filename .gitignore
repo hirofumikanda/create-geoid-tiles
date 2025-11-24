@@ -1,0 +1,5 @@
+geoids/
+terrainrgb/
+tif/
+*.mbtiles
+*.pmtiles
