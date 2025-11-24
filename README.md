@@ -21,6 +21,7 @@ EGM2008ジオイドデータをダウンロードし、Webメルカトル投影�
 
 ```
 .
+├── pipeline.sh                    # 全工程を自動実行するパイプラインスクリプト
 ├── download_geoid.sh              # ジオイドデータのダウンロードスクリプト
 ├── convert_geoid.sh               # GeoTIFF形式への変換スクリプト
 ├── create_terrainrgb_tiles.sh     # terrainRGBタイル作成スクリプト
@@ -30,6 +31,26 @@ EGM2008ジオイドデータをダウンロードし、Webメルカトル投影�
 ```
 
 ## 使い方
+
+### 簡単な方法: パイプラインスクリプトで一括実行
+
+すべての工程を自動的に実行する場合は、パイプラインスクリプトを使用します。
+
+```bash
+chmod +x *.sh
+./pipeline.sh
+```
+
+このスクリプトは以下を順次実行します：
+1. ジオイドデータのダウンロード（`download_geoid.sh`）
+2. GeoTIFF形式への変換（`convert_geoid.sh`）
+3. terrainRGBタイルの作成（`create_terrainrgb_tiles.sh`）
+
+処理時間や生成されたファイルの一覧も表示されます。
+
+### 個別実行する方法
+
+各工程を個別に実行することもできます。
 
 ### 1. ジオイドデータのダウンロード
 
