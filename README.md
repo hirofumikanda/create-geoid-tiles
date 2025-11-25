@@ -121,4 +121,8 @@ terrainRGB形式は、標高データをRGBカラー値として符号化する�
 
 ## ライセンス
 
-このツールはMITライセンスです。EGM2008データのライセンスについては、GeographicLibのドキュメントを参照してください。
+このツールはMITライセンスです。
+
+## 参考サイト
+
+- [GeographicLibのドキュメント](https://geographiclib.sourceforge.io/C++/doc/geoid.html)
