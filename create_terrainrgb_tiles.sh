@@ -37,6 +37,11 @@ echo "完了: ${OUTPUT_TILES_DIR}"
 
 # (4) mbtiles作成
 echo "ステップ4: mbtiles形式に変換"
+# 既存のmbtilesファイルがあれば削除
+if [ -f "${OUTPUT_MBTILES}" ]; then
+    echo "既存の ${OUTPUT_MBTILES} を削除します"
+    rm "${OUTPUT_MBTILES}"
+fi
 mb-util --image_format=png "${OUTPUT_TILES_DIR}/" "${OUTPUT_MBTILES}"
 
 echo "完了: ${OUTPUT_MBTILES}"
